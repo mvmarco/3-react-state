@@ -1,8 +1,6 @@
 import Tweet from "./Tweet";
 
-function TweetList () {
-  const name = 'Marco'
-  const message = 'I really like my dog';
+function TweetList ({name, message}) {
   return (
     <div className="tweet-list">
       <Tweet name={name} status='Active' message={message}/>

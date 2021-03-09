@@ -72,14 +72,13 @@ import CreateTweet from './components/CreateTweet.js'
 import { useState } from 'react';
 
 function App() {
-  const [name, setName] = useState("Marco")
-  const sayHelloHandler = (e) => setName("Marco, you will be a good dev");
+  const name = "Marco";
+  const message = "I love my dog"
   return (
     <div>
       <h1>Hello {name}</h1>
-      <button onClick={sayHelloHandler}>Click</button>
       <CreateTweet />
-      <TweetList />
+      <TweetList name={name} message={message} />
     </div>
   );
 }
