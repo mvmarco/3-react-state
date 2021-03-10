@@ -90,6 +90,9 @@
   because we passed setName={setName}. So originally in the TweetList.js the name is "Marco",
   then we pass "setName" as PROPS in the TweetList params. We use them as base for a click event
   and when you click, the name will pass from "Marco" to something else.
+
+  We passed not only the "name" const here in the App but also the function "setName"
+  both will be props in the TweetList.
 */
 import './App.css';
 import TweetList from './components/TweetList.js'
