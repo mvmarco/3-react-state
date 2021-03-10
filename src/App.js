@@ -69,7 +69,6 @@
 import './App.css';
 import TweetList from './components/TweetList.js'
 import CreateTweet from './components/CreateTweet.js'
-import { useState } from 'react';
 
 function App() {
   const name = "Marco";
