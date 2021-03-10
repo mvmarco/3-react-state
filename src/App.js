@@ -65,19 +65,45 @@
   }
   ------------------------------------------------------------------------------------------
   Here we make another example using the CreateTweet component
+
+  import './App.css';
+  import TweetList from './components/TweetList.js'
+  import CreateTweet from './components/CreateTweet.js'
+
+  function App() {
+    const name = "Marco";
+    const message = "I love my dog"
+    return (
+      <div>
+        <h1>Hello {name}</h1>
+        <CreateTweet />
+        <TweetList name={name} message={message} />
+      </div>
+    );
+  }
+
+  export default App;
+  ------------------------------------------------------------------------------------------
+  Another example is to add the "state" here in App.js
+
+  the name as react state it will be "Marco" and we can update the name in the the <TweetList>
+  because we passed setName={setName}. So originally in the TweetList.js the name is "Marco",
+  then we pass "setName" as PROPS in the TweetList params. We use them as base for a click event
+  and when you click, the name will pass from "Marco" to something else.
 */
 import './App.css';
 import TweetList from './components/TweetList.js'
 import CreateTweet from './components/CreateTweet.js'
+import { useState } from 'react';
 
 function App() {
-  const name = "Marco";
+  const [name, setName] = useState("Marco");
   const message = "I love my dog"
   return (
     <div>
       <h1>Hello {name}</h1>
       <CreateTweet />
-      <TweetList name={name} message={message} />
+      <TweetList name={name} setName={setName} message={message} />
     </div>
   );
 }
